@@ -1,0 +1,42 @@
+{
+    "presets": [
+        "es2017",
+        "es2016",
+        "react"
+    ],
+    "plugins": [
+        "transform-object-rest-spread",
+        "transform-decorators",
+        "transform-export-extensions"
+    ],
+    "env": {
+        "browser/development": {
+            "presets": [
+                ["es2015", {
+                    "modules": false
+                }]
+            ],
+            "plugins": [
+                "react-hot-loader/babel",
+                "transform-inline-environment-variables",
+                "transform-node-env-inline"
+            ]
+        },
+        "browser/production": {
+            "presets": [
+                ["es2015", {
+                    "modules": false
+                }],
+                "babili"
+            ],
+            "plugins": [
+                "transform-inline-environment-variables",
+                "transform-node-env-inline",
+                "minify-empty-function",
+                "transform-remove-console",
+                "transform-remove-debugger",
+                "transform-react-inline-elements"
+            ]
+        }
+    }
+}

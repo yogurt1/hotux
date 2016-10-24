@@ -1,0 +1,24 @@
+{
+  "name": "hotux",
+  "decription": "Hottest boilerplate ever",
+  "respository": "https://github.com/yogurt1/hotux",
+  "logo": "https://node-js-sample.heorkuapp.com/node.png",
+  "website": "https://yogurt1.github.io/hotux",
+  "scripts": {
+    "postdeploy": "npm run build"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "JWT auth token",
+      "generator": "secret"
+    }
+  },
+  "image": "heroku/nodejs"
+  "keywords": [
+    "node",
+    "express",
+    "react",
+    "redux",
+    "webpack"
+  ]
+}

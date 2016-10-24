@@ -1,0 +1,73 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/all",
+        "standard"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "import/resolver": {
+            "webpack": {
+                "config": "webpack.config.js"
+            }
+        }
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "mocha": true,
+        "jest": true,
+        "node": true
+    },
+    "globals": {
+        "__DEV__": true,
+        "DEV": true,
+        "BROWSER": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "experimentalDecorators": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "import/namespace": 0,
+        "no-console": ["warn"],
+        "indent": ["error", 4, {
+            "SwitchCase": 1
+        }],
+        "no-return-assign": 0,
+        "quotes": 0,
+        "react/prop-types": 0,
+        "curly": 0,
+        "spaced-comment": 0,
+        "comma-spacing": 0,
+        "promise/param-names": 0,
+        "react/no-danger": 0,
+        "react/jsx-filename-extension": 0,
+        "react/no-render-return-value": 0,
+        "react/no-multi-comp": 0,
+        "react/jsx-no-bind": 0,
+        "react/no-set-state": 0,
+        "react/no-did-mount-set-state": 0,
+        "react/jsx-no-literals": 0,
+        "react/jsx-max-props-per-line": 0,
+        "react/jsx-sort-props": 0,
+        "react/jsx-closing-bracket-location": 0,
+        "space-before-function-paren": [2, "never"],
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn"
+    }
+}

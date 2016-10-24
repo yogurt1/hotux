@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+coverage
+.env
+assets.json
+stats.json
+static/*
+test/coverage
+test/report
+test/reports

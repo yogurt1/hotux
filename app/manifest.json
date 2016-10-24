@@ -1,0 +1,12 @@
+{
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "name": "Hotux boilerplate",
+    "short_name": "Hotux",
+    "icons": [{
+        "src": "logo-2x.png",
+        "sizes": "96x96",
+        "type": "image/png"
+    }]
+}
