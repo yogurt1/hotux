@@ -1,0 +1,53 @@
+{
+  "coverage": "0%",
+  "expectCount": 10,
+  "actualCount": 0,
+  "files": {
+    "app/actions/counter.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        1,
+        3
+      ]
+    },
+    "app/configureStore.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "app/reducers/counterReducer.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "app/lib/chalker.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "app/lib/former.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "app/localStorage.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        18,
+        6,
+        33
+      ]
+    }
+  }
+}

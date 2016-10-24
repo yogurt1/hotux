@@ -1,9 +1,20 @@
 const preloadedState = window.__PRELOADED__STATE__ || undefined
 
+/*
+ * @returns {boolean}
+ */
 export function resetState() {
     /* reset localStorage state */
+    try {
+        return localStorage.removeItem('state')
+    } catch (err) {
+        return false
+    }
 }
 
+/*
+ * @returns {object} state
+ */
 export function loadState() {
     try {
         const serializedState = localStorage.getItem('state')
@@ -15,6 +26,10 @@ export function loadState() {
     }
 }
 
+/*
+ * @param {object} state
+ * @returns {boolean}
+ */
 export function saveState(state) {
     try {
         const serializedState = JSON.stringify(state)

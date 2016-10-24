@@ -17,10 +17,13 @@ require('images-require-hook')([
 ].map(ext => `.${ext}`), '')
 require('css-modules-require-hook')({
     devMode: DEV,
+    rootDir: process.cwd(),
+    generateScopedName: '[local]', //DEV ? '[local]' : '[hash:base64:5]',
     extensions: ['.scss'],
     preprocessCss(data, filename) {
         const {renderSync} = require('node-sass')
-        const {css} = renderSync({data})
+        const includePaths = []
+        const {css} = renderSync({data, includePaths})
         return css
     }
 })

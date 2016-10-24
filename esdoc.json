@@ -1,0 +1,12 @@
+{
+    "source": "./app",
+    "destination": "./docs",
+    "lint": true,
+    "test": {
+        "type": "mocha",
+        "source": "./test"
+    },
+    "plugins": [{
+        "name": "esdoc-es7-plugin"
+    }]
+}

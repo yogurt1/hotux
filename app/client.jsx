@@ -9,7 +9,7 @@ import {AppContainer as HotContainer} from 'react-hot-loader'
 import App from 'app/components/App'
 import configureStore from 'app/configureStore'
 import routes from 'app/routes'
-import {loadState, saveState} from 'app/localStorage'
+import {loadState, saveState} from 'app/lib/localStorage'
 
 const target = window.document.getElementById('app')
 const initialState = loadState()

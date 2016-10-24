@@ -1,7 +1,11 @@
-export default function former(hash = {}) {
-    const data = new FormData()
-    for (let key in hash) {
-        data.append(key, hash[key])
+/*
+ * @param {object} Object
+ * @returns {object} FormData
+ */
+export default function former(object) {
+    const form = new FormData()
+    for (let key in object) {
+        form.append(key, object[key])
     }
-    return data
+    return form
 }

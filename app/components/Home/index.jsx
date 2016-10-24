@@ -4,7 +4,7 @@ import s from './styles.scss'
 
 export default function Home() {
     return (
-        <div>
+        <div className={s.Home}>
             <h1>Home</h1>
             <div>
                 <h3>React logo: </h3>

@@ -85,7 +85,7 @@ const plugins = [
                 noAutoWrap: true
             },
             sassLoader: {
-                includePaths: [p.resolve('./styles'), p.resolve('./node_modules')],
+                includePaths: [p.resolve('./'), p.resolve('./node_modules')],
                 outputStyle: 'nested'
             },
             cssLoader: {
@@ -147,7 +147,7 @@ const loaders = [{
     test: /\.scss$/i,
     loader: ExtractTextPlugin.extract({
         fallbackLoader: 'style',
-        loader: 'css?modules!sass'
+        loader: `css?modules&localIdentName=${true ? '[local]' : '[hash:base64:5]'}!sass`
     }),
 //    include: [p.resolve('./styles'), p.resolve('./app')]
     exclude: /base\.scss/
