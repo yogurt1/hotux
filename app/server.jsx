@@ -27,6 +27,7 @@ app.use(mount('/graphql', convert(graphQLHTTP(req => ({
         loaders
     },
     schema,
+    pretty: DEV,
     graphiql: DEV
 })))))
 

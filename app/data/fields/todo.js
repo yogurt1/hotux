@@ -17,22 +17,8 @@ export default {
     args: {
         id: {type: GraphQLInt}
     },
-    resolve(root, args) {
-        return getTodo(args.id)
+    resolve(root, args, {loaders}) {
+        return loaders.todo.load(args.id)
     }
 }
 
-function getTodo(id) {
-    const todos = [
-        {
-            id: 1,
-            text: "Hello, world!"
-        },
-        {
-            id: 2,
-            text: "Azaza"
-        }
-    ]
-
-    return todos.filter(todo => todo.id === id)[0]
-}
