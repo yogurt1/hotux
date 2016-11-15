@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.babel.js",
     "start:prod": "cross-env NODE_ENV=production npm --silent run start",
-    "build": "cross-env NODE_ENV=production webpack",
+    "build": "cross-env NODE_ENV=production node -r ./boot node_modules/.bin/webpack",
     "doc": "esdoc -c ./esdoc.json",
     "test": "cross-env NODE_ENV=test karma start",
     "postinstall": "npm --silent run build"
@@ -91,13 +91,18 @@
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
     "font-awesome": "^4.6.3",
+    "graphql": "^0.8.1",
     "history": "^4.3.0",
     "html-webpack-plugin": "^2.22.0",
     "imagemin-webpack-plugin": "^1.2.1",
     "images-require-hook": "^1.0.3",
     "koa": "^2.0.0-alpha.7",
+    "koa-convert": "^1.2.0",
+    "koa-graphql": "^0.6.0",
+    "koa-mount": "^2.0.0",
     "koa-static": "^2.0.0",
     "koa-webpack-middleware": "^1.0.1",
+    "mz": "^2.5.0",
     "node-sass": "^3.10.1",
     "normalize.css": "^5.0.0",
     "null-loader": "^0.1.1",
@@ -125,6 +130,6 @@
     "style-loader": "^0.13.1",
     "sw-precache-webpack-plugin": "^0.5.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.1.0-beta.25"
+    "webpack": "^2.1.0-beta.26"
   }
 }

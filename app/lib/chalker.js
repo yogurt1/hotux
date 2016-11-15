@@ -9,7 +9,5 @@ export default function createChalcker(...opts) {
         }
     }
 
-    return function(...args) {
-        return chalker(...args)
-    }
+    return chalker
 }

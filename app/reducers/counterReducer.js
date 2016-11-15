@@ -1,11 +1,18 @@
 import {INCR, DECR, RESET} from 'app/actions/counter'
 
+const counterHandlers = {
+    [INCR]: ({payload}) => payload + 1,
+    [DECR]: ({payload}) => payload - 1,
+    [RESET]: () => 0
+}
+
 const initialState = 0
+
 export default function counterReducer(state = initialState, action) {
-    switch (action.type) {
-        case INCR: return state + 1
-        case DECR: return state - 1
-        case RESET: return 0
-        default: return state
+    const handler = counterHandlers[action.type]
+
+    return !handler ? state : {
+        ...state,
+        ...handler(action)
     }
 }

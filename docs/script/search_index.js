@@ -6,6 +6,24 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "hotux/app/actions/post.js~fetch_post_failure",
+    "variable/index.html#static-variable-FETCH_POST_FAILURE",
+    "<span>FETCH_POST_FAILURE</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "variable"
+  ],
+  [
+    "hotux/app/actions/post.js~fetch_post_request",
+    "variable/index.html#static-variable-FETCH_POST_REQUEST",
+    "<span>FETCH_POST_REQUEST</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "variable"
+  ],
+  [
+    "hotux/app/actions/post.js~fetch_post_success",
+    "variable/index.html#static-variable-FETCH_POST_SUCCESS",
+    "<span>FETCH_POST_SUCCESS</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "variable"
+  ],
+  [
     "hotux/app/actions/counter.js~incr",
     "variable/index.html#static-variable-INCR",
     "<span>INCR</span> <span class=\"search-result-import-path\">hotux/app/actions/counter.js</span>",
@@ -36,27 +54,63 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "hotux/app/actions/post.js~fetchpostfailure",
+    "function/index.html#static-function-fetchPostFailure",
+    "<span>fetchPostFailure</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "function"
+  ],
+  [
+    "hotux/app/actions/post.js~fetchpostrequest",
+    "function/index.html#static-function-fetchPostRequest",
+    "<span>fetchPostRequest</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "function"
+  ],
+  [
+    "hotux/app/actions/post.js~fetchpostsuccess",
+    "function/index.html#static-function-fetchPostSuccess",
+    "<span>fetchPostSuccess</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "function"
+  ],
+  [
+    "hotux/app/lib/forown.js~forown",
+    "function/index.html#static-function-forOwn",
+    "<span>forOwn</span> <span class=\"search-result-import-path\">hotux/app/lib/forOwn.js</span>",
+    "function"
+  ],
+  [
     "hotux/app/lib/former.js~former",
     "function/index.html#static-function-former",
     "<span>former</span> <span class=\"search-result-import-path\">hotux/app/lib/former.js</span>",
     "function"
   ],
   [
-    "hotux/app/localstorage.js~loadstate",
+    "hotux/app/actions/post.js~getpost",
+    "function/index.html#static-function-getPost",
+    "<span>getPost</span> <span class=\"search-result-import-path\">hotux/app/actions/post.js</span>",
+    "function"
+  ],
+  [
+    "hotux/app/lib/localstorage.js~loadstate",
     "function/index.html#static-function-loadState",
-    "<span>loadState</span> <span class=\"search-result-import-path\">hotux/app/localStorage.js</span>",
+    "<span>loadState</span> <span class=\"search-result-import-path\">hotux/app/lib/localStorage.js</span>",
     "function"
   ],
   [
-    "hotux/app/localstorage.js~resetstate",
+    "hotux/app/reducers/postsreducer.js~postsreducer",
+    "function/index.html#static-function-postsReducer",
+    "<span>postsReducer</span> <span class=\"search-result-import-path\">hotux/app/reducers/postsReducer.js</span>",
+    "function"
+  ],
+  [
+    "hotux/app/lib/localstorage.js~resetstate",
     "function/index.html#static-function-resetState",
-    "<span>resetState</span> <span class=\"search-result-import-path\">hotux/app/localStorage.js</span>",
+    "<span>resetState</span> <span class=\"search-result-import-path\">hotux/app/lib/localStorage.js</span>",
     "function"
   ],
   [
-    "hotux/app/localstorage.js~savestate",
+    "hotux/app/lib/localstorage.js~savestate",
     "function/index.html#static-function-saveState",
-    "<span>saveState</span> <span class=\"search-result-import-path\">hotux/app/localStorage.js</span>",
+    "<span>saveState</span> <span class=\"search-result-import-path\">hotux/app/lib/localStorage.js</span>",
     "function"
   ],
   [
@@ -414,6 +468,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/actions/post.js",
+    "file/app/actions/post.js.html",
+    "app/actions/post.js",
+    "file"
+  ],
+  [
     "app/config.js",
     "file/app/config.js.html",
     "app/config.js",
@@ -432,15 +492,21 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/lib/forown.js",
+    "file/app/lib/forOwn.js.html",
+    "app/lib/forOwn.js",
+    "file"
+  ],
+  [
     "app/lib/former.js",
     "file/app/lib/former.js.html",
     "app/lib/former.js",
     "file"
   ],
   [
-    "app/localstorage.js",
-    "file/app/localStorage.js.html",
-    "app/localStorage.js",
+    "app/lib/localstorage.js",
+    "file/app/lib/localStorage.js.html",
+    "app/lib/localStorage.js",
     "file"
   ],
   [
@@ -453,6 +519,12 @@ window.esdocSearchIndex = [
     "app/reducers/index.js",
     "file/app/reducers/index.js.html",
     "app/reducers/index.js",
+    "file"
+  ],
+  [
+    "app/reducers/postsreducer.js",
+    "file/app/reducers/postsReducer.js.html",
+    "app/reducers/postsReducer.js",
     "file"
   ],
   [

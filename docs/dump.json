@@ -80,6 +80,214 @@
     "kind": "file",
     "static": true,
     "variation": null,
+    "name": "app/actions/post.js",
+    "memberof": null,
+    "longname": "app/actions/post.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export const FETCH_POST_SUCCESS = 'FETCH_POST_SUCCESS'\nexport const FETCH_POST_REQUEST = 'FETCH_POST_REQUEST'\nexport const FETCH_POST_FAILURE = 'FETCH_POST_FAILURE'\n\nexport function fetchPostSuccess(id, post) {\n    return {\n        id,\n        type: FETCH_POST_SUCCESS,\n        payload: post\n    }\n}\n\nexport function fetchPostFailure(id, error) {\n    return {\n        id,\n        type: FETCH_POST_FAILURE,\n        error\n    }\n}\n\nexport function fetchPostRequest(id) {\n    return {\n        id,\n        type: FETCH_POST_REQUEST\n    }\n}\n\nexport function getPost(id) {\n    return async (dispatch) => {\n        dispatch(fetchPostRequest(id))\n        try {\n            const res = await fetch(`/api/posts/${id}`)\n\n            if (!res.ok) {\n                throw new Error(res.responseText)\n            }\n\n            let data = await res.json()\n            dispatch(fetchPostSuccess(id, data))\n        } catch (err) {\n            dispatch(fetchPostFailure(id, error))\n        }\n    }\n}\n"
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "FETCH_POST_SUCCESS",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~FETCH_POST_SUCCESS",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{FETCH_POST_SUCCESS}",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "FETCH_POST_REQUEST",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~FETCH_POST_REQUEST",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{FETCH_POST_REQUEST}",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "FETCH_POST_FAILURE",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~FETCH_POST_FAILURE",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{FETCH_POST_FAILURE}",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "fetchPostSuccess",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~fetchPostSuccess",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{fetchPostSuccess}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "post",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 9,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "fetchPostFailure",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~fetchPostFailure",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{fetchPostFailure}",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 10,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "fetchPostRequest",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~fetchPostRequest",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{fetchPostRequest}",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 11,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "getPost",
+    "memberof": "app/actions/post.js",
+    "longname": "app/actions/post.js~getPost",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/actions/post.js",
+    "importStyle": "{getPost}",
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 12,
+    "kind": "file",
+    "static": true,
+    "variation": null,
     "name": "app/config.js",
     "memberof": null,
     "longname": "app/config.js",
@@ -89,7 +297,7 @@
     "content": "if (DEV && !(global.BROWSER)) {\n    require('dotenv').config({\n        path: '.env'\n    })\n}\n\nconst {\n    PORT = 3000,\n    HOST = 'localhost',\n    SSR = true\n} = process.env\n\n/* Must work with ES2015 import/export syntax */\nmodule.exports = {\n    port: PORT,\n    host: HOST,\n    ssr: SSR,\n    webpack: {\n        /* Special webpack configuration */\n        publicPath: '/'\n    }\n}\n"
   },
   {
-    "__docId__": 5,
+    "__docId__": 13,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -110,7 +318,7 @@
     }
   },
   {
-    "__docId__": 6,
+    "__docId__": 14,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -123,7 +331,7 @@
     "content": "import {createStore, applyMiddleware, combineReducers, compose} from 'redux'\nimport thunk from 'redux-thunk'\nimport {routerMiddleware} from 'react-router-redux'\nimport * as reducers from 'app/reducers'\n\nexport default function configureStore({\n    history, initialState\n} = {}) {\n    const middlewares = [\n        thunk,\n        routerMiddleware(history)\n    ]\n\n    const enhancer = applyMiddleware(...middlewares)\n    const reducer = combineReducers(reducers)\n    const devTools = (BROWSER && window.devToolsExtension)\n        ? window.devToolsExtension()\n        : f => f\n\n    let store = createStore(reducer, initialState, compose(\n        enhancer, devTools\n    ))\n\n    if (module.hot) module.hot.accept(() => {\n        const nextReducer = combineReducers(require('./reducers'))\n        store.replaceReducer(nextReducer)\n    })\n\n    return store\n}\n"
   },
   {
-    "__docId__": 7,
+    "__docId__": 15,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -156,7 +364,7 @@
     "generator": false
   },
   {
-    "__docId__": 8,
+    "__docId__": 16,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -169,7 +377,7 @@
     "content": "import chalk from 'chalk'\n\nexport default function createChalcker(...opts) {\n    let chalker = chalk\n\n    if (opts.length) {\n        for (let opt of opts) {\n            chalker = chalker[opt]\n        }\n    }\n\n    return function(...args) {\n        return chalker(...args)\n    }\n}\n"
   },
   {
-    "__docId__": 9,
+    "__docId__": 17,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -200,7 +408,65 @@
     "generator": false
   },
   {
-    "__docId__": 10,
+    "__docId__": 18,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/lib/forOwn.js",
+    "memberof": null,
+    "longname": "app/lib/forOwn.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/*\n * @param {object} Object to iterate\n * @param {cb} Function to call on every element\n * @returns {array} Array of results of callback\n */\nexport default function forOwn(object, cb, skipUndefined = true) {\n    const array = []\n    const keys = Object.keys(object)\n    const l = keys.length\n\n    for (let val, i = 0; i < l; i++) {\n        value = object[keys[key]]\n\n        if (typeof val !== 'undefined') {\n            array.push(cb(val, i))\n        }\n    }\n\n    return array\n}\n"
+  },
+  {
+    "__docId__": 19,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "forOwn",
+    "memberof": "app/lib/forOwn.js",
+    "longname": "app/lib/forOwn.js~forOwn",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/lib/forOwn.js",
+    "importStyle": "forOwn",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [
+      {
+        "name": "object",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "cb",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "skipUndefined",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": true,
+        "defaultValue": "true"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 20,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -213,7 +479,7 @@
     "content": "/*\n * @param {object} Object\n * @returns {object} FormData\n */\nexport default function former(object) {\n    const form = new FormData()\n    for (let key in object) {\n        form.append(key, object[key])\n    }\n    return form\n}\n"
   },
   {
-    "__docId__": 11,
+    "__docId__": 21,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -243,29 +509,29 @@
     "generator": false
   },
   {
-    "__docId__": 12,
+    "__docId__": 22,
     "kind": "file",
     "static": true,
     "variation": null,
-    "name": "app/localStorage.js",
+    "name": "app/lib/localStorage.js",
     "memberof": null,
-    "longname": "app/localStorage.js",
+    "longname": "app/lib/localStorage.js",
     "access": null,
     "description": null,
     "lineNumber": 1,
     "content": "const preloadedState = window.__PRELOADED__STATE__ || undefined\n\n/*\n * @returns {boolean}\n */\nexport function resetState() {\n    /* reset localStorage state */\n    try {\n        return localStorage.removeItem('state')\n    } catch (err) {\n        return false\n    }\n}\n\n/*\n * @returns {object} state\n */\nexport function loadState() {\n    try {\n        const serializedState = localStorage.getItem('state')\n        if (serializedState === null)\n            return preloadedState\n        return JSON.parse(serializedState)\n    } catch (err) {\n        return preloadedState\n    }\n}\n\n/*\n * @param {object} state\n * @returns {boolean}\n */\nexport function saveState(state) {\n    try {\n        const serializedState = JSON.stringify(state)\n        return localStorage.setItem('state', serializedState)\n    } catch (err) {\n        return false\n    }\n}\n"
   },
   {
-    "__docId__": 13,
+    "__docId__": 23,
     "kind": "variable",
     "static": true,
     "variation": null,
     "name": "preloadedState",
-    "memberof": "app/localStorage.js",
-    "longname": "app/localStorage.js~preloadedState",
+    "memberof": "app/lib/localStorage.js",
+    "longname": "app/lib/localStorage.js~preloadedState",
     "access": null,
     "export": false,
-    "importPath": "hotux/app/localStorage.js",
+    "importPath": "hotux/app/lib/localStorage.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 1,
@@ -277,16 +543,16 @@
     }
   },
   {
-    "__docId__": 14,
+    "__docId__": 24,
     "kind": "function",
     "static": true,
     "variation": null,
     "name": "resetState",
-    "memberof": "app/localStorage.js",
-    "longname": "app/localStorage.js~resetState",
+    "memberof": "app/lib/localStorage.js",
+    "longname": "app/lib/localStorage.js~resetState",
     "access": null,
     "export": true,
-    "importPath": "hotux/app/localStorage.js",
+    "importPath": "hotux/app/lib/localStorage.js",
     "importStyle": "{resetState}",
     "description": null,
     "lineNumber": 6,
@@ -300,16 +566,16 @@
     "generator": false
   },
   {
-    "__docId__": 15,
+    "__docId__": 25,
     "kind": "function",
     "static": true,
     "variation": null,
     "name": "loadState",
-    "memberof": "app/localStorage.js",
-    "longname": "app/localStorage.js~loadState",
+    "memberof": "app/lib/localStorage.js",
+    "longname": "app/lib/localStorage.js~loadState",
     "access": null,
     "export": true,
-    "importPath": "hotux/app/localStorage.js",
+    "importPath": "hotux/app/lib/localStorage.js",
     "importStyle": "{loadState}",
     "description": null,
     "lineNumber": 18,
@@ -323,16 +589,16 @@
     "generator": false
   },
   {
-    "__docId__": 16,
+    "__docId__": 26,
     "kind": "function",
     "static": true,
     "variation": null,
     "name": "saveState",
-    "memberof": "app/localStorage.js",
-    "longname": "app/localStorage.js~saveState",
+    "memberof": "app/lib/localStorage.js",
+    "longname": "app/lib/localStorage.js~saveState",
     "access": null,
     "export": true,
-    "importPath": "hotux/app/localStorage.js",
+    "importPath": "hotux/app/lib/localStorage.js",
     "importStyle": "{saveState}",
     "description": null,
     "lineNumber": 33,
@@ -353,7 +619,7 @@
     "generator": false
   },
   {
-    "__docId__": 17,
+    "__docId__": 27,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -366,7 +632,7 @@
     "content": "import {INCR, DECR, RESET} from 'app/actions/counter'\n\nconst initialState = 0\nexport default function counterReducer(state = initialState, action) {\n    switch (action.type) {\n        case INCR: return state + 1\n        case DECR: return state - 1\n        case RESET: return 0\n        default: return state\n    }\n}\n"
   },
   {
-    "__docId__": 18,
+    "__docId__": 28,
     "kind": "variable",
     "static": true,
     "variation": null,
@@ -387,7 +653,7 @@
     }
   },
   {
-    "__docId__": 19,
+    "__docId__": 29,
     "kind": "function",
     "static": true,
     "variation": null,
@@ -426,7 +692,7 @@
     "generator": false
   },
   {
-    "__docId__": 20,
+    "__docId__": 30,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -436,10 +702,128 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "export {reducer as form} from 'redux-form'\nexport {routerReducer as routing} from 'react-router-redux'\nexport counter from './counterReducer'\n"
+    "content": "export {reducer as form} from 'redux-form'\nexport {routerReducer as routing} from 'react-router-redux'\nexport counter from './counterReducer'\nexport posts from './postsReducer'\n"
   },
   {
-    "__docId__": 21,
+    "__docId__": 31,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "app/reducers/postsReducer.js",
+    "memberof": null,
+    "longname": "app/reducers/postsReducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {\n    FETCH_POST_REQUEST,\n    FETCH_POST_SUCCESS,\n    FETCH_POST_FAILURE\n} from 'app/actions/post'\n\nexport default function postsReducer(state = [], action) {\n    return {\n        ...state,\n        [action.id]: postReducer(state[action.id], action)\n    }\n}\n\nconst initialState = {\n    loading: false,\n    error: void 0,\n    item: null\n}\n\nfunction postReducer(state = initialState, {type, payload, error}) {\n    switch (type) {\n        case FETCH_POST_REQUEST: return {\n            ...state,\n            loading: true\n        }\n        case FETCH_POST_SUCCESS: return {\n            ...state,\n            loading: false,\n            item: action.payload\n        }\n        case FETCH_POST_FAILURE: return {\n            ...state,\n            error,\n            loading: false\n        }\n        default: state\n    }\n}\n"
+  },
+  {
+    "__docId__": 32,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "postsReducer",
+    "memberof": "app/reducers/postsReducer.js",
+    "longname": "app/reducers/postsReducer.js~postsReducer",
+    "access": null,
+    "export": true,
+    "importPath": "hotux/app/reducers/postsReducer.js",
+    "importStyle": "postsReducer",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "optional": true,
+        "types": [
+          "*[]"
+        ],
+        "defaultRaw": [],
+        "defaultValue": "[]"
+      },
+      {
+        "name": "action",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 33,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "initialState",
+    "memberof": "app/reducers/postsReducer.js",
+    "longname": "app/reducers/postsReducer.js~initialState",
+    "access": null,
+    "export": false,
+    "importPath": "hotux/app/reducers/postsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "postReducer",
+    "memberof": "app/reducers/postsReducer.js",
+    "longname": "app/reducers/postsReducer.js~postReducer",
+    "access": null,
+    "export": false,
+    "importPath": "hotux/app/reducers/postsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "params": [
+      {
+        "name": "state",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "initialState",
+        "defaultValue": "initialState"
+      },
+      {
+        "name": "objectPattern1",
+        "types": [
+          "{\"type\": *, \"payload\": *, \"error\": *}"
+        ],
+        "defaultRaw": {
+          "type": null,
+          "payload": null,
+          "error": null
+        },
+        "defaultValue": "{\"type\":null,\"payload\":null,\"error\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 35,
     "kind": "file",
     "static": true,
     "variation": null,
@@ -452,7 +836,7 @@
     "content": ""
   },
   {
-    "__docId__": 23,
+    "__docId__": 37,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -465,7 +849,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 24,
+    "__docId__": 38,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -478,7 +862,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 25,
+    "__docId__": 39,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -491,7 +875,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 26,
+    "__docId__": 40,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -504,7 +888,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 27,
+    "__docId__": 41,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -517,7 +901,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 28,
+    "__docId__": 42,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -530,7 +914,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 29,
+    "__docId__": 43,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -543,7 +927,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 30,
+    "__docId__": 44,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -556,7 +940,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 31,
+    "__docId__": 45,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -569,7 +953,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 32,
+    "__docId__": 46,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -582,7 +966,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 33,
+    "__docId__": 47,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -595,7 +979,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 34,
+    "__docId__": 48,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -608,7 +992,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 35,
+    "__docId__": 49,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -621,7 +1005,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 36,
+    "__docId__": 50,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -634,7 +1018,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 37,
+    "__docId__": 51,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -647,7 +1031,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 38,
+    "__docId__": 52,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -660,7 +1044,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 39,
+    "__docId__": 53,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -673,7 +1057,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 40,
+    "__docId__": 54,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -686,7 +1070,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 41,
+    "__docId__": 55,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -699,7 +1083,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 42,
+    "__docId__": 56,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -712,7 +1096,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 43,
+    "__docId__": 57,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -725,7 +1109,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 44,
+    "__docId__": 58,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -738,7 +1122,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 45,
+    "__docId__": 59,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -751,7 +1135,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 46,
+    "__docId__": 60,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -764,7 +1148,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 47,
+    "__docId__": 61,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -777,7 +1161,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 48,
+    "__docId__": 62,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -790,7 +1174,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 49,
+    "__docId__": 63,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -803,7 +1187,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 50,
+    "__docId__": 64,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -816,7 +1200,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 51,
+    "__docId__": 65,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -829,7 +1213,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 66,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -842,7 +1226,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 67,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -855,7 +1239,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 54,
+    "__docId__": 68,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -868,7 +1252,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 69,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -881,7 +1265,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 56,
+    "__docId__": 70,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -894,7 +1278,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 57,
+    "__docId__": 71,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -907,7 +1291,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 58,
+    "__docId__": 72,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -920,7 +1304,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 59,
+    "__docId__": 73,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -933,7 +1317,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 60,
+    "__docId__": 74,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -946,7 +1330,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 61,
+    "__docId__": 75,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -959,7 +1343,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 62,
+    "__docId__": 76,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -972,7 +1356,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 63,
+    "__docId__": 77,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -985,7 +1369,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 64,
+    "__docId__": 78,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -998,7 +1382,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 65,
+    "__docId__": 79,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1011,7 +1395,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 66,
+    "__docId__": 80,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1024,7 +1408,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 67,
+    "__docId__": 81,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1037,7 +1421,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 68,
+    "__docId__": 82,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1050,7 +1434,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 69,
+    "__docId__": 83,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1063,7 +1447,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 71,
+    "__docId__": 85,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1076,7 +1460,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 72,
+    "__docId__": 86,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1089,7 +1473,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 73,
+    "__docId__": 87,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1102,7 +1486,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 74,
+    "__docId__": 88,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1115,7 +1499,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 75,
+    "__docId__": 89,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1128,7 +1512,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 76,
+    "__docId__": 90,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1141,7 +1525,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 77,
+    "__docId__": 91,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1154,7 +1538,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 78,
+    "__docId__": 92,
     "kind": "external",
     "static": true,
     "variation": null,
@@ -1167,7 +1551,7 @@
     "builtinExternal": true
   },
   {
-    "__docId__": 79,
+    "__docId__": 93,
     "kind": "testFile",
     "static": true,
     "variation": null,
@@ -1180,7 +1564,7 @@
     "content": "import configureStore from 'app/configureStore'\nimport {createStore} from 'redux'\nimport repeat from 'lodash/repeat'\nlet store = configureStore()\n\ndescribe('Store', () => {\n    it('Must be object', () => {\n        expect(store).to.be.an('object')\n    })\n\n    it('Every instance with zero arguments must be deeply equal', () => {\n        let nextStore = configureStore()\n        let state = store.getState()\n        let nextState = nextStore.getState()\n        expect(state).to.deep.equal(nextState)\n    })\n})\n"
   },
   {
-    "__docId__": 80,
+    "__docId__": 94,
     "kind": "testDescribe",
     "static": true,
     "variation": null,
@@ -1194,7 +1578,7 @@
     "lineNumber": 6
   },
   {
-    "__docId__": 81,
+    "__docId__": 95,
     "kind": "testIt",
     "static": true,
     "variation": null,
@@ -1208,7 +1592,7 @@
     "lineNumber": 7
   },
   {
-    "__docId__": 82,
+    "__docId__": 96,
     "kind": "testIt",
     "static": true,
     "variation": null,

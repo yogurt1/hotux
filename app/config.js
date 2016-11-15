@@ -1,9 +1,3 @@
-if (DEV && !(global.BROWSER)) {
-    require('dotenv').config({
-        path: '.env'
-    })
-}
-
 const {
     PORT = 3000,
     HOST = 'localhost',

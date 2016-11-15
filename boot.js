@@ -28,6 +28,10 @@ require('css-modules-require-hook')({
     }
 })
 
+if (DEV) require('dotenv').config({
+    path: '.env'
+})
+
 Object.assign(global, {
     DEV,
     __DEV__: DEV,

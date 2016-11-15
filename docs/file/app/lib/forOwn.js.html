@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../">
-  <title data-ice="title">app/lib/former.js | API Document</title>
+  <title data-ice="title">app/lib/forOwn.js | API Document</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -55,17 +55,26 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">app/lib/former.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">app/lib/forOwn.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*
- * @param {object} Object
- * @returns {object} FormData
+ * @param {object} Object to iterate
+ * @param {cb} Function to call on every element
+ * @returns {array} Array of results of callback
  */
-export default function former(object) {
-    const form = new FormData()
-    for (let key in object) {
-        form.append(key, object[key])
+export default function forOwn(object, cb, skipUndefined = true) {
+    const array = []
+    const keys = Object.keys(object)
+    const l = keys.length
+
+    for (let val, i = 0; i &lt; l; i++) {
+        value = object[keys[key]]
+
+        if (typeof val !== &apos;undefined&apos;) {
+            array.push(cb(val, i))
+        }
     }
-    return form
+
+    return array
 }
 </code></pre>
 
