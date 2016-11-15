@@ -1,7 +1,6 @@
-Hottest React, Redux, Webpack, Koa, Node.js Universal/Isomoprhic + Time Travel boilerplate
+Very very hot Universal/Isomoprhic + Time Travel boilerplate
 
 ###### Frontend:
-* ServiceWorker
 * React
 * React Router
 * Redux (thunk, form, router)
@@ -11,8 +10,9 @@ Hottest React, Redux, Webpack, Koa, Node.js Universal/Isomoprhic + Time Travel b
 
 ###### Backend:
 * Koa
+* GraphQL
 * Webpack v2
-* SW-precache
+* SW Precache
 
 ###### Deploy:
 
